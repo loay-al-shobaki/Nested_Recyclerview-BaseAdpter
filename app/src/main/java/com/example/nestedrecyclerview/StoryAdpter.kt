@@ -6,15 +6,15 @@ import com.example.nestedrecyclerview.databinding.ItemStoryBinding
 import com.example.nestedrecyclerview.model.Story
 
 class StoryAdpter(
-    private var items:List<Story>
-):BaseAdpter<ItemStoryBinding,Story>(items){
+    private var items: List<Story>
+) : BaseAdpter<ItemStoryBinding, Story>(items) {
 
     override val bindingInFalter: (LayoutInflater, ViewGroup, Boolean) -> ItemStoryBinding
         get() = ItemStoryBinding::inflate
 
     override fun bindItem(binding: ItemStoryBinding, item: Story) {
-       with(binding){
-           imgPerson.setImageResource(item.drawableId)
-       }
+        with(binding) {
+            imgPerson.setImageResource(item.drawableId)
+        }
     }
 }

@@ -39,11 +39,10 @@ class MainActivity : AppCompatActivity() {
         )
 
 
-        val type_story=0
-        val type_post =1
-        val items = mutableListOf<Pair<Int, Any>>()
-        items.add(Pair(type_story, listOfStories))
-        items.add(Pair(type_post, listOfPost))
+
+        val items = mutableListOf<Parentitem2>()
+        items.add(Parentitem2.Stories(listOfStories))
+        items.add(Parentitem2.Posts(listOfPost))
 
         val parentAdpter = ParentAdpter(items)
         binding.RecyclerViewHome.adapter=parentAdpter
